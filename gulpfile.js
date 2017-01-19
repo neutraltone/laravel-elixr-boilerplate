@@ -1,5 +1,8 @@
+// Elixr
 const elixir = require('laravel-elixir');
 
+// Require Elixr plugins
+require('laravel-elixir-modernizr');
 require('laravel-elixir-svgstore');
 require('laravel-elixir-imagemin');
 
@@ -31,20 +34,23 @@ elixir(mix => {
 
   .sass(
     'main.scss',
-    null,
+    'public/css/main.min.css',
     null, {
-    includePaths: [
-      paths.normalize,
-      paths.avalancheCss
-    ]
-  })
+      includePaths: [
+        paths.normalize,
+        paths.avalancheCss
+      ],
+    }
+  )
 
   .webpack(
     [
-      'frontend/app.js',
+      'app.js',
     ],
-    'public/javascript/frontend/app.js'
+    'public/js/app.min.js'
   )
+
+  .modernizr()
 
   .svgstore(
     'resources/assets/icons',

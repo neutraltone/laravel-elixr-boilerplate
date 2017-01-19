@@ -1,0 +1,1079 @@
+/**
+ * main.scss
+ */
+/* ==========================================================================
+   Settings
+   ========================================================================== */
+/**
+ * Variables.
+ */
+/**
+ * settings/_main.scss
+ */
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+/**
+ * settings/_base.scss
+ */
+/* ==========================================================================
+   Base variable settings
+   ========================================================================== */
+/**
+ * High level base settings
+ */
+/**
+ * Typography
+ */
+/**
+ * settings/_colors.scss
+ */
+/* ==========================================================================
+   Color variable settings
+   ========================================================================== */
+/**
+ * Color Palette
+ */
+/**
+ * settings/_grid.scss
+ */
+/* ==========================================================================
+   Avalanche override settings
+   ========================================================================== */
+/**
+ * Note: Settings below override and enable certain feature of the avalanche
+ * grid system. All documentation can be found here:
+ * https://github.com/colourgarden/avalanche
+ */
+/**
+ * settings/_responsive.scss
+ */
+/* ==========================================================================
+   Responsive breakpoint settings
+   ========================================================================== */
+/**
+ * Hold our breakpoint aliases and conditions in a list.
+ *
+ * These can be invoked later on via the `media-query()` mixin found in
+ * `tools/_responsive.scss`.
+ */
+/* ==========================================================================
+   Tools
+   ========================================================================== */
+/**
+ * Functions, mixins etc.
+ */
+/**
+ * tools/_main.scss
+ */
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+/**
+ * tools/_colors.scss
+ */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/**
+ * Color mixin - retreives the colors from the color $colors map in
+ * `settings/_colors.scss`.
+ *
+ * @param {Color name} $color-name - Defining color name.
+ * @param {Color varient} $color-variant - Varient of color.
+ *
+ * Usage:
+ *
+ * .foo {
+ *   color: color(brand, primary);
+ * }
+ *
+ * .foo {
+ *   color: color(brand);
+ * }
+ */
+/**
+ * Colour functions
+ */
+/**
+ * tools/_font-size.scss
+ */
+/* ==========================================================================
+   Font size
+   ========================================================================== */
+/**
+ * Font sizing mixin - calculates font-size in rems with px fallback and
+ * line-height ratio based on default baseline height.
+ *
+ * @param {Font size} $font-size - Desired font size.
+ * @param {Line height} $line-height - [auto] - Desired line height.
+ *
+ * Usage:
+ *
+ * .foo {
+ *   @include font-size(16px, 1.6);
+ * }
+ *
+ */
+/**
+ * tools/_image-overlay.scss
+ */
+/* ==========================================================================
+   Image overlay
+   ========================================================================== */
+/**
+ * A mixin for adding linear gradient overlays to background images.
+ *
+ * Originally by @syntag - http://codepen.io/SYNTAG/pen/yayWZE
+ *
+ * @param {Img} $img - Background image for element.
+ * @param {Color} $color - Start colour of the linear gradient.
+ * @param {Color2} $color2 [$color] - End colour of the linear gradient.
+ * @param {Opacity} $opacity [0.3] - the opacity of the gradient.
+ * @param {Hover} $hover [none] - if set to `hover` enables a hover effect.
+ * @param {Hover opacity} $hover-opacity [0.1] - the opacity of the gradient when hovered.
+ *
+ * Usage:
+ *
+ * .background-image {
+ *   @include img-overlay('//placehold.it/300x300', #ff0099, #ff9900, 0.8, hover, 0.5);
+ * }
+ */
+/**
+ * tools/_maths.scss
+ */
+/* ==========================================================================
+   Maths
+   ========================================================================== */
+/**
+ * Maths functions.
+ *
+ * @param {Number} $number - input number for calculation.
+ *
+ * Usage:
+ *
+ * .foo {
+ *   width: halve(10px);
+ * }
+ */
+/**
+ * tools/_placeholder.scss
+ */
+/* ==========================================================================
+   Placeholder
+   ========================================================================== */
+/**
+ * A mixin for easily styling placeholders on inputs.
+ *
+ * @param {Styles} $styles - Placeholder styles.
+ *
+ * Usage:
+ *
+ * .foo {
+ *   @include placeholder {
+ *     color: green;
+ *   }
+ * }
+ *
+ * @include placeholder {
+ *   color: red;
+ * }
+ */
+/**
+ * tools/_ratio-box.scss
+ */
+/* ==========================================================================
+   Ratio box
+   ========================================================================== */
+/**
+ * A simple mixin to quickly generate boxes which scale and maintain an their
+ * aspect ratio.
+ *
+ * @param {Ratio} $ratio - [1/1] - Block element aspect ratio.
+ *
+ * Usage:
+ *
+ * .widescreen {
+ *   @include ratio-box(16/9);`
+ * }
+ */
+/**
+ * tools/_responsive.scss
+ */
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+/**
+ * A simple mixin to quickly generate whole media queries from the aliases and
+ * conditions defined in `settings/_responsive.scss`.
+ *
+ * @param {Media query} $mq - Alias as outlined in `settings/_responsive.scss`.
+ *
+ * Usage:
+ *
+ * .foo {
+ *   width: 100px;
+ *
+ *   @include media-query(desk) {
+ *     .bar {
+ *       width: 200px;
+ *     }
+ *   }
+ * }
+ */
+/**
+ * tools/_triangle.scss
+ */
+/* ==========================================================================
+   Triangle
+   ========================================================================== */
+/**
+ * A simple mixin for generating CSS triangles using border.
+ *
+ * @param {Direction} $direction - Triangle direction, either `top`, `right`,
+ *   `bottom` or `left`.
+ * @param {Color} $color [currentcolor] - Triangle color.
+ * @param {Width} $width [1em] - Triangle width.
+ * @param {Height} $height [1em] - Triangle height.
+ *
+ * Usage:
+ *
+ * .triangle {
+ *   @include triangle(bottom, #fff, 2em, 2em);
+ * }
+ */
+/**
+ * tools/_vertical-align.scss
+ */
+/* ==========================================================================
+   Vertical Align
+   ========================================================================== */
+/**
+ * Vertically align any element in relation to it's parent container.
+ *
+ * Usage:
+ *
+ * .foo {
+ *   @include vertical-align();
+ * }
+ */
+/* ==========================================================================
+   Generic
+   ========================================================================== */
+/**
+ * Low-specificity, far-reaching rulesets.
+ */
+/**
+ * generic/_main.scss
+ */
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+/*! Avalanche | MIT License | @colourgarden */
+/*------------------------------------*    SETTINGS
+\*------------------------------------*/
+/*------------------------------------*    LOGIC aka THE MAGIC
+\*------------------------------------*/
+/*------------------------------------*    GRID LAYOUT
+\*------------------------------------*/
+.grid {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: -24px;
+  font-size: 0rem; }
+
+.grid__cell {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  padding-left: 24px;
+  margin: 0;
+  vertical-align: top;
+  font-size: 1rem; }
+
+/*------------------------------------*    GRID WIDTHS
+\*------------------------------------*/
+.\31\/2, .\32\/4 {
+  width: 50%; }
+
+.\31\/3 {
+  width: 33.33333%; }
+
+.\32\/3 {
+  width: 66.66667%; }
+
+.\31\/4 {
+  width: 25%; }
+
+.\33\/4 {
+  width: 75%; }
+
+@media screen and (max-width: 499px) {
+  .\31\/2--thumb, .\32\/4--thumb {
+    width: 50%; }
+  .\31\/3--thumb {
+    width: 33.33333%; }
+  .\32\/3--thumb {
+    width: 66.66667%; }
+  .\31\/4--thumb {
+    width: 25%; }
+  .\33\/4--thumb {
+    width: 75%; } }
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .\31\/2--handheld, .\32\/4--handheld {
+    width: 50%; }
+  .\31\/3--handheld {
+    width: 33.33333%; }
+  .\32\/3--handheld {
+    width: 66.66667%; }
+  .\31\/4--handheld {
+    width: 25%; }
+  .\33\/4--handheld {
+    width: 75%; } }
+
+@media screen and (min-width: 500px) {
+  .\31\/2--handheld-and-up, .\32\/4--handheld-and-up {
+    width: 50%; }
+  .\31\/3--handheld-and-up {
+    width: 33.33333%; }
+  .\32\/3--handheld-and-up {
+    width: 66.66667%; }
+  .\31\/4--handheld-and-up {
+    width: 25%; }
+  .\33\/4--handheld-and-up {
+    width: 75%; } }
+
+@media screen and (max-width: 600px) {
+  .\31\/2--pocket, .\32\/4--pocket {
+    width: 50%; }
+  .\31\/3--pocket {
+    width: 33.33333%; }
+  .\32\/3--pocket {
+    width: 66.66667%; }
+  .\31\/4--pocket {
+    width: 25%; }
+  .\33\/4--pocket {
+    width: 75%; } }
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .\31\/2--lap, .\32\/4--lap {
+    width: 50%; }
+  .\31\/3--lap {
+    width: 33.33333%; }
+  .\32\/3--lap {
+    width: 66.66667%; }
+  .\31\/4--lap {
+    width: 25%; }
+  .\33\/4--lap {
+    width: 75%; } }
+
+@media screen and (min-width: 601px) {
+  .\31\/2--lap-and-up, .\32\/4--lap-and-up {
+    width: 50%; }
+  .\31\/3--lap-and-up {
+    width: 33.33333%; }
+  .\32\/3--lap-and-up {
+    width: 66.66667%; }
+  .\31\/4--lap-and-up {
+    width: 25%; }
+  .\33\/4--lap-and-up {
+    width: 75%; } }
+
+@media screen and (max-width: 1024px) {
+  .\31\/2--portable, .\32\/4--portable {
+    width: 50%; }
+  .\31\/3--portable {
+    width: 33.33333%; }
+  .\32\/3--portable {
+    width: 66.66667%; }
+  .\31\/4--portable {
+    width: 25%; }
+  .\33\/4--portable {
+    width: 75%; } }
+
+@media screen and (min-width: 1025px) {
+  .\31\/2--desk, .\32\/4--desk {
+    width: 50%; }
+  .\31\/3--desk {
+    width: 33.33333%; }
+  .\32\/3--desk {
+    width: 66.66667%; }
+  .\31\/4--desk {
+    width: 25%; }
+  .\33\/4--desk {
+    width: 75%; } }
+
+@media screen and (min-width: 1160px) {
+  .\31\/2--widescreen, .\32\/4--widescreen {
+    width: 50%; }
+  .\31\/3--widescreen {
+    width: 33.33333%; }
+  .\32\/3--widescreen {
+    width: 66.66667%; }
+  .\31\/4--widescreen {
+    width: 25%; }
+  .\33\/4--widescreen {
+    width: 75%; } }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .\31\/2--retina, .\32\/4--retina {
+    width: 50%; }
+  .\31\/3--retina {
+    width: 33.33333%; }
+  .\32\/3--retina {
+    width: 66.66667%; }
+  .\31\/4--retina {
+    width: 25%; }
+  .\33\/4--retina {
+    width: 75%; } }
+
+/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
+/* Document
+       ========================================================================== */
+/**
+     * 1. Change the default font family in all browsers (opinionated).
+     * 2. Correct the line height in all browsers.
+     * 3. Prevent adjustments of font size after orientation changes in
+     *    IE on Windows Phone and in iOS.
+     */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 112.5%;
+  line-height: 1.33333em;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/* Sections
+       ========================================================================== */
+/**
+     * Remove the margin in all browsers (opinionated).
+     */
+body {
+  margin: 0; }
+
+/**
+     * Add the correct display in IE 9-.
+     */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+h1 {
+  font-size: 2em;
+  line-height: 1.33333em;
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  margin: 0.66667em 0; }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.77778em;
+  margin: 0.88889em 0; }
+
+h3 {
+  font-size: 1.17em;
+  line-height: 2.2792em;
+  margin: 1.1396em 0; }
+
+h4 {
+  font-size: 1em;
+  line-height: 1.33333em;
+  margin: 1.33333em 0; }
+
+h5 {
+  font-size: 0.83em;
+  line-height: 1.60643em;
+  margin: 1.60643em 0; }
+
+h6 {
+  font-size: 0.67em;
+  line-height: 1.99005em;
+  margin: 1.99005em 0; }
+
+/* Grouping content
+       ========================================================================== */
+/**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+blockquote {
+  margin: 1.33333em 40px; }
+
+dl,
+ol,
+ul {
+  margin: 1.33333em 0; }
+
+/**
+       * Turn off margins on nested lists.
+       */
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+ol,
+ul {
+  padding: 0 0 0 40px; }
+
+/**
+     * Add the correct display in IE 9-.
+     */
+figcaption,
+figure {
+  display: block; }
+
+/**
+     * Add the correct margin in IE 8.
+     */
+figure {
+  margin: 1.33333em 40px; }
+
+/**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+     * Add the correct display in IE.
+     */
+main {
+  display: block; }
+
+/**
+       * Set 1 unit of vertical rhythm on the top and bottom margin.
+       */
+p,
+pre {
+  margin: 1.33333em 0; }
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Links
+       ========================================================================== */
+/**
+     * 1. Remove the gray background on active links in IE 10.
+     * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+     */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+     * Remove the outline on focused links when they are also active or hovered
+     * in all browsers (opinionated).
+     */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+       ========================================================================== */
+/**
+     * 1. Remove the bottom border in Firefox 39-.
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+     * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+     */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+     * Add the correct font style in Android 4.3-.
+     */
+dfn {
+  font-style: italic; }
+
+/**
+     * Add the correct background and color in IE 9-.
+     */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+     * Add the correct font size in all browsers.
+     */
+small {
+  font-size: 80%; }
+
+/**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+audio,
+video {
+  display: inline-block; }
+
+/**
+     * Add the correct display in iOS 4-7.
+     */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+     * Remove the border on images inside links in IE 10-.
+     */
+img {
+  border-style: none; }
+
+/**
+     * Hide the overflow in IE.
+     */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+       ========================================================================== */
+/**
+     * 1. Change the font styles in all browsers (opinionated).
+     * 2. Remove the margin in Firefox and Safari.
+     */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.33333em;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+     * Show the overflow in IE.
+     */
+button {
+  overflow: visible; }
+
+/**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+     * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+     *    controls in Android 4.
+     * 2. Correct the inability to style clickable types in iOS and Safari.
+     */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  /**
+       * Remove the inner border and padding in Firefox.
+       */
+  /**
+       * Restore the focus styles unset by the previous rule.
+       */ }
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0; }
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText; }
+
+/**
+     * Show the overflow in Edge.
+     */
+input {
+  overflow: visible; }
+
+/**
+     * 1. Add the correct box sizing in IE 10-.
+     * 2. Remove the padding in IE 10-.
+     */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+  /**
+       * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+       */ }
+  [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+/**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/**
+     * Change the border, margin, and padding in all browsers (opinionated).
+     */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  color: inherit;
+  /* 2 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+     * 1. Add the correct display in IE 9-.
+     * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+     * Remove the default vertical scrollbar in IE.
+     */
+textarea {
+  overflow: auto; }
+
+/* Interactive
+       ========================================================================== */
+/*
+     * Add the correct display in Edge, IE, and Firefox.
+     */
+details {
+  display: block; }
+
+/*
+     * Add the correct display in all browsers.
+     */
+summary {
+  display: list-item; }
+
+/*
+     * Add the correct display in IE 9-.
+     */
+menu {
+  display: block;
+  /*
+         * 1. Set 1 unit of vertical rhythm on the top and bottom margin.
+         * 2. Set consistent space for the list style image.
+         */
+  margin: 1.33333em 0;
+  /* 1 */
+  padding: 0 0 0 40px;
+  /* 2 */
+  /**
+         * Turn off margins on nested lists.
+         */ }
+  menu menu,
+  ol menu,
+  ul menu {
+    margin: 0; }
+
+/* Scripting
+       ========================================================================== */
+/**
+     * Add the correct display in IE 9-.
+     */
+canvas {
+  display: inline-block; }
+
+/**
+     * Add the correct display in IE.
+     */
+template {
+  display: none; }
+
+/* Hidden
+       ========================================================================== */
+/**
+     * Add the correct display in IE 10-.
+     */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * Unclassed HTML elements.
+ */
+/**
+ * base/_main.scss
+ */
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+/* ==========================================================================
+   Objects
+   ========================================================================== */
+/**
+ * Design-free objects, abstractions and patterns.
+ */
+/**
+ * objects/_main.scss
+ */
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+/* Extends
+   ========================================================================== */
+/* Main
+   ========================================================================== */
+/* ==========================================================================
+   Vendor
+   ========================================================================== */
+/**
+ * Third party components.
+ */
+/**
+ * vendor/_main.scss
+ */
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+/* ==========================================================================
+   Components
+   ========================================================================== */
+/**
+ * Components and widgets.
+ */
+/**
+ * components/_main.scss
+ */
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+/* ==========================================================================
+   Trumps
+   ========================================================================== */
+/**
+ * Helper classes and overrides.
+ */
+/**
+ * trumps/main
+ */
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+/**
+ * trumps/_accessibility.scss
+ */
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+/**
+ * Styles for screen-reader only elements
+ */
+
+.visuallyhidden {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); }
+
+/**
+ * base/_adjacent.scss
+ */
+/* ==========================================================================
+   Adjacent
+   ========================================================================== */
+/**
+ * Remove bottom margin
+ */
+.adjacent {
+  margin-bottom: 0; }
+
+/**
+ * trumps/_clearfix.scss
+ */
+/* ==========================================================================
+   Clearfix
+   ========================================================================== */
+/**
+ * Clearfixes - @extend %clearfix to prevent class="clearfix" appearing all the time
+ */
+
+.visuallyhidden::after,
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: ''; }
+
+/**
+ * trumps/_responsive.scss
+ */
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+/**
+ * Show/Hide block level elements based on a media query. Useful for modules
+ * that need to be duplicated in the markup
+ */
+.desk--show,
+.palm--show {
+  display: none; }
+
+@media (max-width: 480px) {
+  .palm--show {
+    display: block; }
+  .palm--hide {
+    display: none; } }
+
+@media (min-width: 1024px) {
+  .desk--show {
+    display: block; }
+  .desk--hide {
+    display: none; } }
+
+/**
+ * trumps/_text.scss
+ */
+/* ==========================================================================
+   Text
+   ========================================================================== */
+/**
+ * Uppercase text
+ */
+
+.text-upper {
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=main.min.css.map */
