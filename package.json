@@ -1,7 +1,7 @@
 {
   "name": "gnusante-templates",
   "version": "1.0.0",
-  "description": "Website repository for the Gnusanté website templates",
+  "description": "Front-end template repository for the Gnusanté website templates",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
