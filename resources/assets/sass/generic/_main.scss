@@ -1,0 +1,14 @@
+/**
+ * generic/_main.scss
+ */
+
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+
+// NPM dependencies
+@import 'normalize';
+@import "avalanche";
+
+// Initialize dependency functions
+@include normalize();

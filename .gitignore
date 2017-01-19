@@ -1,0 +1,46 @@
+# Laravel Elixr Boilerplate
+# https://github.com/neutraltone/laravel-elixr-boilerplate/
+# @author Tony Phipps
+
+# Node.js
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+pids
+logs
+results
+npm-debug.log
+node_modules
+
+# Sass
+.sass-cache
+
+# Composer
+/vendor
+
+# Laravel ignores
+Homestead.yaml
+Homestead.json
+.env
+*.map
+/storage/debugbar
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
